@@ -1,0 +1,46 @@
+<nav class="mb-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item active">Categories</li>
+  </ol>
+</nav>
+
+<div class="row mb-4">
+  <div class="col-md">
+    <h2 class="h2">Categories</h2>
+  </div>
+
+  <div class="col-md">
+    <!-- routerLink="new" !== routerLink="/new" -->
+    <a routerLink="new" class="btn btn-success float-end">New Category</a>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <colgroup>
+    <col style="width: calc(100% - 144px);">
+    <col style="width: 144px;">
+  </colgroup>
+
+  <!-- thead>tr>th*2 -->
+  <thead>
+    <tr class="table-dark">
+      <th>Category</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <!-- tbody>tr>td*2 -->
+  <tbody>
+    <tr *ngFor="let category of categories">
+      <td>
+        <strong>{{ category.name }}</strong><br>
+        <small>{{ category.description }}</small>
+      </td>
+      <td>
+        <a class="btn btn-sm btn-outline-info me-2" [routerLink]="[category.id]">Edit</a>
+        <a class="btn btn-sm btn-outline-danger" (click)="deleteCategory(category)">Remove</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
