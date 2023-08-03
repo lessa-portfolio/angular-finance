@@ -1,1 +1,38 @@
-<p>category-form works!</p>
+<nav aria-label="breadcrumb" class="mb-5">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+    <li class="breadcrumb-item"><a routerLink="/categories">Categories</a></li>
+    <li class="breadcrumb-item active">Categories Form</li>
+  </ol>
+</nav>
+
+<div class="row mb-4">
+  <div class="col-md">
+    <h2 class="h2">Categories Form</h2>
+  </div>
+
+  <div class="col-md">
+    <a routerLink="/categories" class="btn btn-light float-end">Back</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header">Category Info</div>
+  <div class="card-body">
+    <form>
+      <div class="d-flex mb-3">
+        <div class="w-100 me-4">
+          <label for="name">Name</label>
+          <input class="form-control" type="text" name="name" id="name" placeholder="Type a name">
+        </div>
+
+        <div class="w-100">
+          <label for="description">Description</label>
+          <input class="form-control" type="text" name="description" id="description" placeholder="Type a description">
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-success">Save</button>
+    </form>
+  </div>
+</div>
