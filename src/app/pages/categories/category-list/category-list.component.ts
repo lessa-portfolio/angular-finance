@@ -20,6 +20,7 @@ export class CategoryListComponent {
   }
 
   deleteCategory(category: Category) {
+    // @ts-ignore
     this.categoryService.delete(category.id).subscribe({
       next: () => this.categories = this.categories.filter(el => el !== category),
       error: error => console.error(error)

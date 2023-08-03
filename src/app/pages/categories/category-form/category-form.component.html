@@ -8,7 +8,7 @@
 
 <div class="row mb-4">
   <div class="col-md">
-    <h2 class="h2">Categories Form</h2>
+    <h2 class="h2">Categories Form {{ currentAction }}</h2>
   </div>
 
   <div class="col-md">
@@ -19,7 +19,7 @@
 <div class="card">
   <div class="card-header">Category Info</div>
   <div class="card-body">
-    <form>
+    <form [formGroup]="categoryForm">
       <div class="d-flex mb-3">
         <div class="w-100 me-4">
           <label for="name">Name</label>
